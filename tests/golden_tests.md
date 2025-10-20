@@ -1,0 +1,119 @@
+# Test 1  Basic hexadecimal conversion
+Input:
+1E (hex)
+Expected:
+30
+
+# Test 2  Binary conversion
+Input:
+101 (bin)
+Expected:
+5
+
+# Test 3  Uppercase single word
+Input:
+Go (up)
+Expected:
+GO
+
+# Test 4  Lowercase range
+Input:
+HELLO WORLD (low, 2)
+Expected:
+hello world
+
+# Test 5  Capitalization range
+Input:
+brooklyn bridge (cap, 2)
+Expected:
+Brooklyn Bridge
+
+# Test 6  Article correction before vowel
+Input:
+A orange tree.
+Expected:
+An orange tree.
+
+# Test 7  Quotes cleanup
+Input:
+He said: ' this is fine ' .
+Expected:
+He said: 'this is fine'.
+
+# Test 8  Punctuation spacing
+Input:
+Wait ,what ?!
+Expected:
+Wait, what?!
+
+# Test 9  Ellipsis and punctuation handling
+Input:
+I was thinking ... You were right
+Expected:
+I was thinking... You were right
+
+# Test 10  Out-of-range uppercase modifier
+Input:
+10 files (up, 6)
+Expected:
+10 FILES
+
+# Test 11  Combined hex and uppercase
+Input:
+1f (hex) files (up)
+Expected:
+31 FILES
+
+# Test 12  Quotes and command together
+Input:
+He shouted ' stop (up) '
+Expected:
+He shouted 'STOP'
+
+# Test 13  Capitalization and punctuation
+Input:
+new york (cap) !
+Expected:
+New York!
+
+# Test 14  Mixed uppercase and lowercase
+Input:
+one two three (up, 2) four (low)
+Expected:
+one TWO THREE four
+
+# Test 15  Binary with punctuation
+Input:
+101 (bin)!
+Expected:
+5!
+
+# Test 16  Punctuation spacing cleanup
+Input:
+I was sitting over there ,and then BAMM !!
+Expected:
+I was sitting over there, and then BAMM!!
+
+# Test 17  Empty quotes handling
+Input:
+He said: ''
+Expected:
+He said: ''
+
+# Test 18  Article correction before 'h'
+Input:
+A honest mistake.
+Expected:
+An honest mistake.
+
+# Test 19  Mixed modifiers with punctuation
+Input:
+wow (up), amazing (low, 1)!
+Expected:
+WOW, amazing!
+
+# Test 20  Long sentence with multiple rules
+Input:
+I added 1E (hex) files ,and 10 (bin) were removed (low, 2) .
+Expected:
+I added 30 files, and 2 were removed.
