@@ -117,3 +117,15 @@ Input:
 I added 1E (hex) files ,and 10 (bin) were removed (low, 2) .
 Expected:
 I added 30 files, and 2 were removed.
+
+# Test 21  Article correction before consonant
+Input:
+An lemon tree.
+Expected:
+A lemon tree.
+
+# Test 22  Long sentence with multiple rules and article correction
+Input:
+harold wilson (cap, 2) : ' I am a (cap) optimist ,but a (up) optimist who carries , ' a raincoat . 
+Expected:
+Harold Wilson: 'I Am An optimist, but An optimist who carries,' a raincoat.
